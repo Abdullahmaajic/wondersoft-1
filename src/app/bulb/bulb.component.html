@@ -1,0 +1,11 @@
+<div>
+  <img [src]= "bulb ?'../../assets/images/pic_bulbon.gif' : '../../assets/images/pic_bulboff.gif'" alt="bulbon" (click)="change1()">
+</div>
+
+<!--  -->
+
+<div>
+  <button class="btn btn-primary m-2" (click)="change(count + 1)">add</button>
+  <button class="btn btn-danger m-2" (click)="change(count - 1)">remove</button>
+
+</div>

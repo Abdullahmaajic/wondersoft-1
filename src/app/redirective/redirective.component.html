@@ -1,0 +1,69 @@
+<div [ngClass]="{bdr:false,bg:true,div:true}">
+  <h5>hello</h5>
+</div>
+
+<div class="bdr bg div">
+  <h5>hiiii</h5>
+</div>
+<hr>
+<!-- <select (change)="myclr()">
+  <option #clr>green</option>
+  <option value="" #clr>pink</option>
+  <option value="" #clr>red</option>
+  <option value="" #clr>blue</option>
+</select> -->
+
+
+<div *ngIf="myCondition; else abc">
+  <h1>hii</h1>
+</div>
+
+<ng-template #abc>
+  <div>
+    <h1>hello</h1>
+  </div>
+</ng-template>
+<hr>
+<div [ngStyle]="{'color':clr}">
+  <h2>hello</h2>
+  <select name="" id="" (change)="myclr(color.value)" #color>
+    <option value="green">green</option>
+    <option value="red">red</option>
+    <option value="blue">blue</option>
+  </select>
+</div>
+
+<!-- <hr>
+
+<div [ngSwitch}="myval">
+  <h3 [ngSwitchCase]="1">tamil</h3>
+  <h3 [ngSwitchCase]="2">kannada</h3>
+  <h3 [ngSwitchCase]="3">marati</h3>
+  <h3 [ngSwitchCase]="4">malayala</h3>
+  <h3 [ngSwitchDefault>hindi</h3>
+
+</div>  -->
+
+<hr>
+<div *ngFor="let day of days">
+
+  <div *ngIf="day=='Sunday' || day=='Saturday' ; else elseBlock">
+    <h4>{{day}}: is weekend </h4>
+
+  </div>
+  <ng-template #elseBlock>
+    <h4> {{day}}: week days </h4>
+  </ng-template>
+</div>
+
+<hr>
+
+<input type="text" value="{{fruitvalue}}" #fruit>:
+<input type="button" value="Add Fruit "
+  (click)="addfruit(fruit.value)">
+<ol>
+  <li *ngFor="let fruitnames of fruits ">
+    {{fruitnames}}
+  </li>
+
+</ol>
